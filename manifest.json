@@ -1,0 +1,11 @@
+{
+    "name": "test_01",
+    "version": "1.0.1",
+    "description": "A test Extension",
+    "manifest_version": 3,
+    "author": "nooobEngineer",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "test Extension"
+    }
+}
