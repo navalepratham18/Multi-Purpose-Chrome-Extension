@@ -10,5 +10,11 @@
     },
     "permissions": [
         "activeTab"
+    ],
+    "background": {
+        "service_worker": "test.js"
+    },
+    "host_permissions": [
+        "<all_urls>"
     ]
 }
