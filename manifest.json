@@ -1,20 +1,20 @@
 {
-    "name": "test_01",
-    "version": "1.0.2",
-    "description": "A test Extension",
     "manifest_version": 3,
-    "author": "nooobEngineer",
+    "name": "Picture-in-Picture Extension",
+    "version": "1.0",
+    "description": "Watch videos in Picture-in-Picture mode.",
     "action": {
-        "default_popup": "index.html",
-        "default_title": "test Extension"
+      "default_popup": "popup.html"    
     },
     "permissions": [
-        "activeTab"
+      "activeTab",
+      "scripting"
     ],
     "background": {
-        "service_worker": "test.js"
+      "service_worker": "background.js"
     },
     "host_permissions": [
-        "<all_urls>"
+      "<all_urls>"
     ]
-}
+  }
+  
