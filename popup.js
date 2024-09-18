@@ -1,7 +1,9 @@
-document.getElementById('pipButton').addEventListener('click', () => {
-  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.runtime.sendMessage({ action: "togglePiP" }, (response) => {
-      console.log(response.status);
+document.getElementById('pipButton').addEventListener('click', async () => {
+    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+  
+    chrome.scripting.executeScript({
+      target: { tabId: tab.id, allFrames: true },
+      files: ['script.js']
     });
   });
-});
+  
