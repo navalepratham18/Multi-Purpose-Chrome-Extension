@@ -1,7 +1,7 @@
 {
     "name": "All-In-One Chrome Extension",
     "description": "Ad-Blocker, Picture-in-Picture, Currency Exchange, Weather Updates, Daily-News and etc.. ",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "icons": {
       "128": "assets/multiArrowIcon.png"
     },
