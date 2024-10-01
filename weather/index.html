@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+    <button onclick="Geolocation()" class="weather">
+        <p id="weatherid"></p>
+        <img class="weathericon" src="">
+    </button>
+
+    <script>
+        let x = document.getElementById("weatherid");
+
+        function Geolocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(data) {
+            console.log(data);
+
+            let lat = data.coords.latitude;
+            let lon = data.coords.longitude;
+
+            const url = 'http://api.openweathermap.org/data/2.5/weather?lat=18.7485933&lon=73.5969425&appid=apikey&units=metric'
+            fetch(url, { method: 'GET' })
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    let temp = parseInt(data.list[0].main.temp);
+                    x.innerHTML = '${temp} °C';
+                })
+        }
+    </script>
+
+    <style>
+        .weather {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+        }
+
+        .weatherid {
+            position: absolute;
+            font-size: 20px;
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+
+</body>
+
+</html>
