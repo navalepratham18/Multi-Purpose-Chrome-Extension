@@ -11,7 +11,7 @@
 
 <body>
     <button onclick="Geolocation()" class="weather">
-        <p id="weatherid"></p>
+        <p id="weatherid">wtf</p>
         <img class="weathericon" src="">
     </button>
 
@@ -35,10 +35,11 @@
             const url = 'http://api.openweathermap.org/data/2.5/weather?lat=18.7485933&lon=73.5969425&appid=apikey&units=metric'
             fetch(url, { method: 'GET' })
                 .then((res) => res.json())
-                .then((data) => {
-                    console.log(data);
-                    let temp = parseInt(data.list[0].main.temp);
-                    x.innerHTML = '${temp} °C';
+                .then(data => {
+                    const temperature = data.main.temp;
+                    const description = data.weather[0].description;
+                    const location = data.name;
+                    x.innerHTML = `<p>${location}: ${temperature}°C</p>`;
                 })
         }
     </script>
@@ -47,7 +48,7 @@
         .weather {
             position: absolute;
             height: 50px;
-            width: 50px;
+            width: 70px;
         }
 
         .weatherid {
