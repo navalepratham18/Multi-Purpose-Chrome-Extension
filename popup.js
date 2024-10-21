@@ -1,5 +1,5 @@
 // Add your API key here
-const apiKey = '';           //Insert your API Key inside ''
+const CurrencyApiKey = '';           //Insert your API Key inside ''
 const weatherApiKey = ''           //Insert your API Key inside ''
 
 
@@ -102,7 +102,7 @@ convertButton.addEventListener('click', async () => {
     }
 
     try {
-        const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}?apikey=${apiKey}`);
+        const response = await fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}?apikey=${CurrencyApiKey}`);
         const data = await response.json();
 
         if (data.rates[toCurrency]) {
