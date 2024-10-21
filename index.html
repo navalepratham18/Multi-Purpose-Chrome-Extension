@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIO Extension</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <img class="aio-bg" src="./assets/AIO-bg.png" alt="" />
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="./assets/AIO-logo.png" alt="" />
+          <h3 class="logo-title">AIO Extension</h3>
+        </div>
+        <div class="quick-access">
+          <svg
+            class="theme"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10.412 4.158A8 8 0 1 0 18.93 16A9 9 0 0 1 10 7c0-.98.131-1.937.412-2.842M2 12C2 6.477 6.477 2 12 2h1.734l-.868 1.5C12.287 4.5 12 5.689 12 7a7 7 0 0 0 8.348 6.87l1.682-.327l-.543 1.626C20.162 19.137 16.417 22 12 22C6.477 22 2 17.523 2 12"
+            />
+          </svg>
+          <svg
+            class="close"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+          >
+            <path d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5" />
+          </svg>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- ------------WEATHER------------ -->
+      <article id="locationButton" class="weather-section section">
+        <img src="./assets/weather-icon.png" alt="" />
+        <div class="weather-content">
+          <p id="weather-location"></p>
+          <h2 id="weather-temp"></h2>
+          <p id="weather-error"></p>
+        </div>
+        <img id="weather-cloud" src="./assets/weather-cloud.png" alt="" />
+      </article>
+
+      <!-- ------------CURRENCY-CONVERTOR------------ -->
+      <article class="currency-section section">
+        <div class="currency-head">
+          <img src="./assets/currency-icon.png" alt="" />
+          <div>
+            <h3 class="currency-title">Currency Convertor</h3>
+            <p class="currency-des">Knowing what other currencies translate to your knwo currencies is easier than ever!</p>
+          </div>
+        </div>
+        <div class="currency-content">
+          <select id="fromCurrency"></select>
+          <div class="input-cont">
+            <input type="number" id="amount" placeholder="Enter value" />
+            <button id="convertButton">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none"> 
+                  <path
+                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                  />
+                  <path
+                  class="arrow-path"
+                    d="M12.707 3.636a1 1 0 0 0-1.414 0L5.636 9.293a1 1 0 1 0 1.414 1.414L11 6.757V20a1 1 0 1 0 2 0V6.757l3.95 3.95a1 1 0 0 0 1.414-1.414z"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+          <select id="toCurrency"></select>
+          <div class="currency-result">
+            <!-- <h2 id="result-num"></h2> -->
+            <!-- <span id="result-currency"></span> -->
+          </div>
+          <p id="currency-error"></p>
+        </div>
+      </article>
+      <!-- ------------PICTURE-IN-PICTURE------------ -->
+      <article class="pip-section section">
+        <div class="pip-head">
+          <img src="./assets/pip-icon.png" alt="" />
+          <div>
+            <h3 class="pip-title">Picture in Picture</h3>
+            <p class="pip-des">
+              A single click will make your daily multi tasking more quicker and
+              easier.
+            </p>
+          </div>
+        </div>
+        <div class="pip-content">
+          <button id="pipButton">Enable PiP</button>
+        </div>
+      </article>
+
+      <!-- ------------DICTIONARY------------ -->
+      <article class="dict-section section">
+        <div class="dict-head">
+          <img src="./assets/dictionary-icon.png" alt="" />
+          <h3 class="dict-title">Dictionary</h3>
+        </div>
+        <div class="input-cont">
+          <input type="text" id="wordInput" placeholder="Enter a word..." />
+          <button id="searchDictionary">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20px"
+                height="20px"
+                viewBox="0 0 24 24"
+              >
+                <g fill="none"> 
+                  <path
+                    d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                  />
+                  <path
+                  class="arrow-path"
+                    d="M12.707 3.636a1 1 0 0 0-1.414 0L5.636 9.293a1 1 0 1 0 1.414 1.414L11 6.757V20a1 1 0 1 0 2 0V6.757l3.95 3.95a1 1 0 0 0 1.414-1.414z"
+                  />
+                </g>
+              </svg>
+          </button>
+        </div>
+        <div id="dict-content">
+          <!-- <div class="word-cont"> -->
+            <!-- <h2 class="word">Cold</h2> -->
+            <audio id="dictionaryAudio" hidden></audio>
+            <!-- <button id="play-audio">
+              <svg
+                class="dict-speaker"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+              >
+                <path
+                class="dict-speaker-path"
+                  d="M18 5.604c0-1.114-1.346-1.671-2.134-.884l-4.694 4.695A2 2 0 0 1 9.757 10H6a4 4 0 0 0-4 4v4a4 4 0 0 0 4 4h3.757a2 2 0 0 1 1.415.585l4.694 4.695c.788.787 2.134.23 2.134-.884zm-5.414 5.225L16 7.415v17.171l-3.414-3.414A4 4 0 0 0 9.757 20H6a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h3.757a4 4 0 0 0 2.829-1.171m10.238-1.395a1 1 0 1 0-1.648 1.133c1.285 1.87 1.887 3.676 1.887 5.433c0 1.758-.602 3.565-1.887 5.434a1 1 0 1 0 1.648 1.133c1.465-2.13 2.238-4.324 2.238-6.567c0-2.242-.773-4.435-2.238-6.566m2.866-4.158a1 1 0 0 0-1.38 1.449c2.387 2.273 3.628 5.738 3.628 9.275s-1.241 7.003-3.628 9.276a1 1 0 1 0 1.38 1.449c2.863-2.727 4.247-6.762 4.247-10.725S28.554 8.003 25.69 5.276"
+                />
+              </svg>
+            </button> -->
+          <!-- </div> -->
+          <!-- <div class="dict-result"> -->
+            <!-- <p class="phonetics">/dvdvav/</p> -->
+            <!-- <p class="meaning">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iure dolores in quidem fuga numquam odit velit a quibusdam quo.</p> -->
+          <!-- </div> -->
+          <!-- <p id="dict-error">Hello world</p> -->
+        </div>
+      </article>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
