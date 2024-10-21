@@ -1,7 +1,7 @@
 {
   "name": "TEST-All-In-One Chrome Extension",
-  "description": "Ad-Blocker, Picture-in-Picture, Currency Exchange, Weather Updates, Daily-News, etc.",
-  "version": "1.0.7",
+  "description": "Ad-Blocker, Picture-in-Picture, Currency Exchange, Weather Updates, Word Dictionary, etc.",
+  "version": "1.1.7",
   "icons": {
     "128": "assets/multiArrowIcon.png"
   },
