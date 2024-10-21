@@ -1,14 +1,69 @@
+// Ad-blocker - Logic
 chrome.storage.sync.get({ optOutAnalytics: false }, results => {
-  const optOutAnalyticsCheckbox = document.querySelector('#optOutAnalytics');
+  const optOutAnalytics = results.optOutAnalytics;
 
-  optOutAnalyticsCheckbox.checked = results.optOutAnalytics;
-  optOutAnalyticsCheckbox.onchange = _ => {
-    chrome.storage.sync.set({
-      optOutAnalytics: optOutAnalyticsCheckbox.checked
-    }, _ => {
-      // Reload extension to make opt-out change immediate. 
-      chrome.runtime.reload();
-      window.close();
+  if (!optOutAnalytics) {
+    const adBlockList = [
+      "*://*.doubleclick.net/*",
+      "*://*.googlesyndication.com/*",
+      "*://*.googleadservices.com/*",
+      "*://*.adnxs.com/*",
+      "*://*.adsafeprotected.com/*",
+      "*://*.advertising.com/*",
+      "*://*.yieldmanager.com/*",
+      "*://*.moatads.com/*",
+      "*://*.criteo.com/*",
+      "*://*.taboola.com/*"
+    ];
+
+    chrome.declarativeNetRequest.updateDynamicRules({
+      addRules: adBlockList.map((urlPattern, id) => ({
+        "id": id + 1,
+        "priority": 1,
+        "action": { "type": "block" },
+        "condition": { "urlFilter": urlPattern }
+      })),
+      removeRuleIds: Array.from(Array(adBlockList.length), (_, i) => i + 1)
     });
-  };
+  }
+});
+
+chrome.storage.onChanged.addListener((changes, namespace) => {
+  if (namespace === 'sync' && changes.optOutAnalytics) {
+    const optOutAnalytics = changes.optOutAnalytics.newValue;
+
+    if (optOutAnalytics) {
+      chrome.declarativeNetRequest.updateDynamicRules({
+        removeRuleIds: Array.from(Array(10), (_, i) => i + 1) 
+      });
+    } else {
+      const adBlockList = [
+        "*://*.doubleclick.net/*",
+        "*://*.googlesyndication.com/*",
+        "*://*.googleadservices.com/*",
+        "*://*.adnxs.com/*",
+        "*://*.adsafeprotected.com/*",
+        "*://*.advertising.com/*",
+        "*://*.yieldmanager.com/*",
+        "*://*.moatads.com/*",
+        "*://*.criteo.com/*",
+        "*://*.taboola.com/*"
+      ];
+
+      chrome.declarativeNetRequest.updateDynamicRules({
+        addRules: adBlockList.map((urlPattern, id) => ({
+          "id": id + 1,
+          "priority": 1,
+          "action": { "type": "block" },
+          "condition": { "urlFilter": urlPattern }
+        })),
+        removeRuleIds: []
+      });
+    }
+  }
+});
+
+// Optional: Log when the extension is installed or updated
+chrome.runtime.onInstalled.addListener(() => {
+  console.log('Extension installed..!!');
 });
