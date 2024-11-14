@@ -7,6 +7,7 @@ chrome.storage.sync.get({ optOutAnalytics: false }, results => {
       "*://*.doubleclick.net/*",
       "*://*.googlesyndication.com/*",
       "*://*.googleadservices.com/*",
+      "*://*.facebook.com/*",
       "*://*.adnxs.com/*",
       "*://*.adsafeprotected.com/*",
       "*://*.advertising.com/*",
