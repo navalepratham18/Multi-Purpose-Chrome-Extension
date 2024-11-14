@@ -42,6 +42,7 @@ chrome.storage.onChanged.addListener((changes, namespace) => {
         "*://*.doubleclick.net/*",
         "*://*.googlesyndication.com/*",
         "*://*.googleadservices.com/*",
+        "*://*.facebook.com/*",
         "*://*.adnxs.com/*",
         "*://*.adsafeprotected.com/*",
         "*://*.advertising.com/*",
