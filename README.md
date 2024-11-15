@@ -63,7 +63,7 @@ Feel free to reach out for any questions or contributions:
 
 <br />
 <div align="center">
-    <img src="assets/Output.png" alt="Logo" height="700">
+    <img src="assets/Output.png" alt="Logo" height="550">
   <h1 align="center">Multi-Purpose Chrome Extension</h1>
 </div>
 
