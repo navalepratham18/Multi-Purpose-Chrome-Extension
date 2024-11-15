@@ -1,5 +1,3 @@
-# Community Engineering Project
-
 # 🛠️ **Multi-Purpose Chrome Extension**  
 
 An all-in-one Chrome extension combining ad-blocking, PiP, weather updates, currency exchange, and more. Say goodbye to a cluttered taskbar and hello to seamless browsing!
@@ -65,7 +63,7 @@ Feel free to reach out for any questions or contributions:
 
 <br />
 <div align="center">
-    <img src="assets/Output.png" alt="Logo" height="100">
+    <img src="assets/Output.png" alt="Logo" height="700">
   <h1 align="center">Multi-Purpose Chrome Extension</h1>
 </div>
 
