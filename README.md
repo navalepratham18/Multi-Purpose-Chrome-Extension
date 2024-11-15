@@ -53,9 +53,16 @@ The extension is now added to your browser! 🎉
 
 ## 💬 **Contact**
 Feel free to reach out for any questions or contributions:
-- **Email**: [your-email@example.com](mailto:workwithprathamesh18@gmail.com)
-- **GitHub**: [Your GitHub Profile](https://github.com/navalepratham18)
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/prathameshnavale18)
+
+1. Prathamesh Rajendra Navale
+- **Email**: [workwithprathamesh18@gmail.com](mailto:workwithprathamesh18@gmail.com)
+- **GitHub**: [navalepratham18](https://github.com/navalepratham18)
+- **LinkedIn**: [Prathamesh-Navale](https://linkedin.com/in/prathameshnavale18)
+
+2. Aniruddha Kadam
+- **Email**: [Aniruddhadroit@gmail.com](mailto:Aniruddhadroit@gmail.com)
+- **GitHub**: [Anniruddha-Kadam-dev](https://github.com/Anniruddha-Kadam-dev)
+- **LinkedIn**: [Aniruddha-Kadam](https://www.linkedin.com/in/aniruddha-kadam-098865289/)
 
 ---
 
@@ -64,11 +71,12 @@ Feel free to reach out for any questions or contributions:
 <br />
 <div align="center">
     <img src="assets/Output.png" alt="Logo" height="550">
-  <h1 align="center">Multi-Purpose Chrome Extension</h1>
+  <h2 align="center">Multi-Purpose Chrome Extension</h2>
 </div>
 
+---
 
-Made with ❤️ by the **NooBxtension Team**.
+Made with ❤️ by the **NoobEngineers Team**.
 
  
 
