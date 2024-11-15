@@ -24,7 +24,7 @@ An all-in-one Chrome extension combining ad-blocking, PiP, weather updates, curr
 4. Enable Developer mode (toggle at the top-right corner).
 5. Click Load unpacked and select the cloned/downloaded folder.
 6. Go to the 'popup.js' file and Enter the Weather and Currency API's Accordingly.
-The extension is now added to your browser! 🎉
+-The extension is now added to your browser! 🎉
 
 ---
 
