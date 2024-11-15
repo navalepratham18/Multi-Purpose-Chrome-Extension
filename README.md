@@ -19,10 +19,11 @@ An all-in-one Chrome extension combining ad-blocking, PiP, weather updates, curr
    ```bash
    git clone https://github.com/your-repo/NooBxtension.git
 2. Open Chrome and navigate to:
--chrome://extensions/
-3. Enable Developer mode (toggle at the top-right corner).
-4. Click Load unpacked and select the cloned/downloaded folder.
-5. Go to the 'popup.js' file and Enter the Weather and Currency API's Accordingly.
+   ```bash
+    - chrome://extensions/
+4. Enable Developer mode (toggle at the top-right corner).
+5. Click Load unpacked and select the cloned/downloaded folder.
+6. Go to the 'popup.js' file and Enter the Weather and Currency API's Accordingly.
 The extension is now added to your browser! 🎉
 
 ---
@@ -68,7 +69,6 @@ Feel free to reach out for any questions or contributions:
 
 ## 👀 **Project Preview**
 
-<br />
 <div align="center">
     <img src="assets/Output.png" alt="Logo" height="550">
   <h2 align="center">Multi-Purpose Chrome Extension</h2>
