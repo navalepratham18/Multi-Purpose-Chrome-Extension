@@ -21,10 +21,10 @@ An all-in-one Chrome extension combining ad-blocking, PiP, weather updates, curr
 2. Open Chrome and navigate to:
    ```bash
     chrome://extensions/
-4. Enable Developer mode (toggle at the top-right corner).
-5. Click Load unpacked and select the cloned/downloaded folder.
-6. Go to the 'popup.js' file and Enter the Weather and Currency API's Accordingly.
-7. The extension is now added to your browser! 🎉
+3. Enable Developer mode (toggle at the top-right corner).
+4. Click Load unpacked and select the cloned/downloaded folder.
+5. Go to the 'popup.js' file and Enter the Weather and Currency API's Accordingly.
+6. The extension is now added to your browser! 🎉
 
 ---
 
@@ -60,7 +60,7 @@ Feel free to reach out for any questions or contributions:
 - **GitHub**: [navalepratham18](https://github.com/navalepratham18)
 - **LinkedIn**: [Prathamesh-Navale](https://linkedin.com/in/prathameshnavale18)
 
-2. Aniruddha Kadam
+2. Aniruddha Kadam (UI/UX, Front-End)
 - **Email**: [Aniruddhadroit@gmail.com](mailto:Aniruddhadroit@gmail.com)
 - **GitHub**: [Anniruddha-Kadam-dev](https://github.com/Anniruddha-Kadam-dev)
 - **LinkedIn**: [Aniruddha-Kadam](https://www.linkedin.com/in/aniruddha-kadam-098865289/)
